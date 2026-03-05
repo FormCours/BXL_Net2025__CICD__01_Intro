@@ -1,5 +1,5 @@
 # Définition du nom du WorkFlow
-name: Show « Hello World »
+name: Afficher « Hello World »
 
 # Trigger manuel
 on: 
