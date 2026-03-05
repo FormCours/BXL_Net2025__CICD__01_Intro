@@ -22,4 +22,5 @@ jobs:
         run: echo "Déploiment de la branches $GITHUB_REF"
       - name: formation location
         # Exemple d'une variable d'env custom
-        run: echo "Lieux de formation : $FORMATION_CENTER"
+        run: |
+          echo "Lieux de formation : $FORMATION_CENTER"
