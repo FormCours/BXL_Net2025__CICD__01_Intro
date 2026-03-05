@@ -1,0 +1,16 @@
+# Définition du nom du WorkFlow
+name: Show « Hello World »
+
+# Trigger manuel
+on: 
+  workflow_dispatch:
+
+# Travaux à réaliser
+jobs:
+  # ↓ Nom du job
+  show_hello: 
+    runs-on: windows-latest
+    steps:
+      # ↓ Nom et l'action de l'etape
+      - name: print_hello 
+        run: echo "Hello World !"
