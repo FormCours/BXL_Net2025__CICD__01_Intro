@@ -11,6 +11,7 @@ on:
 # Création de variable d'env custom
 env:
   FORMATION_CENTER: "Digital City ©"
+  STORE_IN_ENV: ${{ vars.PROJECT_NAME }}
 
 # Job qui manipule des variables et secrets
 jobs:
@@ -28,5 +29,7 @@ jobs:
       - name: variable github
         run: |
           echo "Project name : ${{ vars.PROJECT_NAME }}"
-          echo "User password : ${{ secrets.USER_PASSWORD }}"
           echo "Mode selected : ${{ vars.MODE }}"
+          echo "User password : ${{ secrets.USER_PASSWORD }}"
+          echo "Variable github dans un env : $STORE_IN_ENV"
+
