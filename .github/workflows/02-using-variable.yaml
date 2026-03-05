@@ -15,6 +15,7 @@ env:
 # Job qui manipule des variables et secrets
 jobs:
   use_variables:
+    environment: ENV_GITHUB_1
     runs-on: ubuntu-latest
     steps:
       - name: confirm deploy
@@ -24,3 +25,8 @@ jobs:
         # Exemple d'une variable d'env custom
         run: |
           echo "Lieux de formation : $FORMATION_CENTER"
+      - name: variable github
+        run: |
+          echo "Project name : ${{ vars.PROJECT_NAME }}"
+          echo "User password : ${{ secrets.USER_PASSWORD }}"
+          echo "Mode selected : ${{ vars.MODE }}"

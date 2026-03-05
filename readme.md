@@ -52,6 +52,19 @@ L'ensemble d'action à faire
   - Manipuler les variables d'event du workflow (Lié au déclenchement)
 
 ### Syntaxe d'utilisation
-- Variable d'env local : 
-  - Sous linux : `$VAR_NAME`
-  - Sous Powershell : `$env:VAR_NAME`
+
+#### Variable d'env local : 
+Utilisation
+- Sous linux : `$VAR_NAME`
+- Sous Powershell : `$env:VAR_NAME`
+
+#### Variable et secrets dans Github
+Aller à `Setting > Secrets and variables > Actions` pour configurer les variables.
+
+Deux types de configuration : 
+- Repository: Toujours accessible
+- Environment: Accessible si le job utilise `environment: env-name`.
+
+Utilisation
+- variables : `${{ vars.VAR_NAME }}`  
+- secrets : `${{ secrets.VAR_NAME }}`
